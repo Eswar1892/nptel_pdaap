@@ -35,6 +35,7 @@
 - Some points to note:
     - Use names to remember intermediate values
     - Values can be single items or collections (a.k.a Data structure)
+___
 
 ## Week 2, Lecture 2 - Improving naive gcd
 
@@ -43,5 +44,9 @@
 - Even Better: only if i divided both m & n then take i into a list (instead of storing factors and then taking out the common factors)
 - Even better: Since factor of any number x, lie between 1 & x (inclusive) and doesn't go beyond X. So instead of scanning for factors till max(m,n), we should infact scan it till min(m,n)
 
+- Even better: We don't need any lists as only need the largest divisor. we can assign i to a variable and return it. As we are traversing from smallest to largest it will automatically return whatever is the largest.
 
+- Even better: Scan Backwards! Since we are looking for the largest divisor, we can traverse from largest to the smallest. assign i to a new variable, break once the if condition satisfies.
+- `while loops`: A while loop run `while` a condition is true.
+- 
 

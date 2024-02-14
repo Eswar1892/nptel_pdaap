@@ -77,3 +77,12 @@
 
 - Note: Whenever we call a function inside another function, the calling function waits until there is a return value from the called function. The called function passes back a value to the calling function.. Hence, there needs to be a return statement in such kinds of functions.
 
+- Even Better algorithm
+- Consider gcd(101, 2), the number of steps to be performed using a Naive algorithm is 2 since we find out all the factors of the minimum number of the 2. If we do the gcd(101,2) using the above of taking differences, we need to do it ~ 50 times. So in some cases, the difference is worse than our naive approach. So there is a better possible observation.
+
+- if d is the gcd(m,n), then m = ad, n = bd. If we divide m%n with remainder, m = qn + r => ad = (bd)n+r. since d divides both m, n. It should also divide r (compare LHS, RHS). Hence d is also the gcd(n,r). Remember d is the gretest factor of n so must be greatest common factor for n,r
+- So the algorithm so something like this:
+- Check if m%n ==0 => gcd is n
+- Else calculte the gcd(n,r).
+
+

@@ -20,3 +20,16 @@ def euclid_gcd_while_loop(m,n):
         (m,n) = (max(n,diff),min(n,diff))
 
     return (n)
+
+
+def euclid_algorithm_using_remainder(m,n):
+
+    if m<n:
+        (m,n) = (n,m)
+
+    while m%n !=0:
+        r = m%n
+        (m,n) = (n,r)
+    return n
+
+print(euclid_algorithm_using_remainder(14,8))
